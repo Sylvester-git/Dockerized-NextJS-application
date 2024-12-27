@@ -1,6 +1,36 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Dockerizing your Next.js application offers several compelling benefits that can streamline development, improve scalability, and simplify deployment. Some benefits include:
+
+### Consistent Environment: 
+Docker ensures your app runs the same across all stages of development and deployment.
+
+### Dependency Management: 
+It packages all dependencies, avoiding conflicts with other applications.
+
+### Effortless Deployment: 
+Docker makes deploying your app to any environment straightforward and consistent.
+
+### Scalability: 
+Easily scale your app with multiple container instances to handle increased traffic.
+
+### CI/CD Integration: 
+Automate builds, tests, and deployments seamlessly in your pipeline.
+Resource Efficiency: Containers are lightweight, start quickly, and use fewer resources than virtual machines.
+
+### Version-Controlled Infrastructure: 
+Dockerfiles track your environment changes alongside your code.
+
+### Microservices Compatibility: 
+Easily run and manage microservices in isolated containers.
+
+### Enhanced Security: 
+Containers isolate apps, reducing risks of vulnerabilities spreading.
+
+### Simplified Collaboration: 
+Share and set up your app environment effortlessly with a single file.
 
 ## Getting Started
+
 
 First, run the development server:
 
@@ -20,17 +50,18 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Runnung Dockerfile
 
-To learn more about Next.js, take a look at the following resources:
+Run the following docker command
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker build -t {name} {dockerfile path}
+# or
+docker build -t {name} . (current directory)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
 
-## Deploy on Vercel
+## Deploy on Render
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest and cheapest way to deploy your dockerized Next.js app is to use the [Render Platform](https://render.com/). Create a new WEB SERVICE and choose docker as your platform of choice.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
